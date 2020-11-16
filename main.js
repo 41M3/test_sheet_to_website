@@ -30,9 +30,11 @@ data.forEach(function(data) {
     body15.innerHTML = data.body15;
     body16.innerHTML = data.body16;
     body17.innerHTML = data.body17;
-    if (!data.body18) {
+    if (!data.body18 || !data.body17) {
         document.getElementById("body18").style.display = "none";
+        document.getElementById("body17").style.display = "none";
     } else {
+        body17.innerHTML = "ouai";
         body18.innerHTML = data.body18;
     }
 
