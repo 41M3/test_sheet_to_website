@@ -32,6 +32,7 @@ data.forEach(function(data) {
     body18.innerHTML = data.body18;
     title.innerHTML = data.title;
     body18.Visible = false;
+    document.getElementById("body18").style.display = "none";
 
  });
 }
