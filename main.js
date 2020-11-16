@@ -10,6 +10,7 @@
  
 function showInfo(data, tabletop) {
 data.forEach(function(data) {
+    title.innerHTML = data.title;
     header.innerHTML = data.header;
     header2.innerHTML = data.header2;
     body.innerHTML = data.body;
@@ -29,10 +30,11 @@ data.forEach(function(data) {
     body15.innerHTML = data.body15;
     body16.innerHTML = data.body16;
     body17.innerHTML = data.body17;
-    body18.innerHTML = data.body18;
-    title.innerHTML = data.title;
-    body18.Visible = false;
-    document.getElementById("body18").style.display = "none";
+    if (!data.body18) {
+        document.getElementById("body18").style.display = "none";
+    } else {
+        body18.innerHTML = data.body18;
+    }
 
  });
 }
