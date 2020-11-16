@@ -10,7 +10,6 @@
  
 function showInfo(data, tabletop) {
 data.forEach(function(data) {
-    title.innerHTML = data.Titre;
     header.innerHTML = data.header;
     header2.innerHTML = data.header2;
     body.innerHTML = data.body;
@@ -30,6 +29,7 @@ data.forEach(function(data) {
     body15.innerHTML = data.body15;
     body16.innerHTML = data.body16;
     body17.innerHTML = data.body17;
+    title.innerHTML = data.title;
 
  });
 }
