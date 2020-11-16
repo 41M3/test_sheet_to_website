@@ -1,32 +1,116 @@
 <!DOCTYPE html>
-<html>
-  <body>
-
-    <p id="food"></p>
-
-    <script type="text/javascript" src="src/tabletop.js"></script>
-    <script type="text/javascript">
-      window.onload = function() { init() };
-
-      var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0AmYzu_s7QHsmdDNZUzRlYldnWTZCLXdrMXlYQzVxSFE&output=html';
-
-     function init() {
-  Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/0AmYzu_s7QHsmdDNZUzRlYldnWTZCLXdrMXlYQzVxSFE/pubhtml',
-                    callback: function(data, tabletop) { 
-                      console.log(data)
-                    },
-                    simpleSheet: true } )
-}
-
-      function showInfo(data) {
-        // data comes through as a simple array since simpleSheet is turned on
-        alert("Successfully processed " + data.length + " rows!")
-        document.getElementById("food").innerHTML = "<strong>Foods:</strong> " + [ data[0].Name, data[1].Name, data[2].Name ].join(", ");
-        console.log("data");
-        console.log(data);
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/logos.png"
+    />
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree:400,600&display=swap" rel="stylesheet">
+    <title>Please Edit Me</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
       }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+        text-decoration: none;
+        font-size: 11px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Start Banner -->
+    <header>
+      <div class="banner">
+        <img src="img/logo.svg" alt="" class="logo" />
+        <h1 id="header" class="banner-header"></h1>
+        <p id="header2" class="banner-paragraph">
+          
+        </p>
+        <div class="button-box">
+          <a href="#"><button class="ios-button">Copy-edit</button></a>
+          <a href="#"><button class="mac-button">Revise</button></a>
+        </div>
+      </div>
+    </header>
 
-      document.write("The published spreadsheet is located at <a target='_new' href='" + public_spreadsheet_url + "'>" + public_spreadsheet_url + "</a>");        
-    </script>
+    <!-- Start Section One: Keep track of your snippets -->
+    <section class="feature">
+      <div class="intro-text">
+        <h3 id="body"></h3>
+        <p id="body2">
+          
+        </p>
+      </div>
+      <div class="track-snippets">
+        <div class="snippet-left"><img src="img/image-computer.png" alt="computer" /></div>
+        <div class="snippet-right">
+          <div>
+            <h4 id="body3"></h4>
+            <p id="body4">
+            </p>
+          </div>
+          <div>
+            <h4 id="body5"></h4>
+            <p id="body6"></p>
+          </div>
+          <div>
+            <h4 id="body7"></h4>
+            <p id="body8">
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Start Section Two: Access Clipboard anywhere -->
+    <section class="feature access-clipboard">
+      <div class="intro-text">
+        <h3 id="body9"></h3>
+        <p id="body10">
+         
+        </p>
+      </div>
+      <div>
+        <img src="img/image-devices.png" alt="devices" />
+      </div>
+    </section>
+
+    <!-- Start Section Three: Supercharge your workflow -->
+    <section class="feature supercharge-workflow">
+      <div class="intro-text">
+        <h3 id="body11"></h3>
+        <p id="body12"></p>
+      </div>
+      <div class="columns">
+        <div class="col create-blacklists">
+          <img src="img/icon-blacklist.svg" alt="" />
+          <h4 id="body13"></h4>
+          <p id="body14"> 
+          </p>
+        </div>
+        <div class="col plain-snippets">
+          <img src="img/icon-text.svg" alt="" />
+          <h4 id="body15"> </h4>
+          <p id="body16">
+            
+          </p>
+        </div>
+        <div class="col sneak-preview">
+          <img src="img/icon-preview.svg" alt="" />
+            <h4 id="body17"</h4>
+         
+        </div>
+      </div>
+    </section>
+    <script src="main.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
   </body>
 </html>
