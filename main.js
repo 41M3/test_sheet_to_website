@@ -37,6 +37,8 @@ data.forEach(function(data) {
         body17.innerHTML = "ouai";
         body18.innerHTML = data.body18;
     }
+    button1link.href = data.button1link;
+    document.getElementById("button1").innerHTML = data.button1;
 
  });
 }
