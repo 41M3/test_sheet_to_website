@@ -11,6 +11,9 @@ function init() {
 
 function showInfo(data, tabletop) {
     data.forEach(function (data) {
+
+        testempty.innerHTML = "<h3 id=\"body\"></h3>"
+
         title.innerHTML = data.title;
         header.innerHTML = data.header;
         header2.innerHTML = data.header2;
@@ -31,6 +34,7 @@ function showInfo(data, tabletop) {
         body15.innerHTML = data.body15;
         body16.innerHTML = data.body16;
         body17.innerHTML = data.body17;
+
         if (/*!data.body || !data.body2 ||
             !data.body3 || !data.body4 ||
             !data.body5 || !data.body6 ||
@@ -64,12 +68,21 @@ function showInfo(data, tabletop) {
             body17.innerHTML = data.body17;
             body18.innerHTML = data.body18;
         }
+
         if (!data.button1 || !data.button1link) {
             document.getElementById("button1link").style.display = "none";
             document.getElementById("button1").style.display = "none";
         } else {
             document.getElementById("button1link").href = data.button1link;
             document.getElementById("button1").innerHTML = data.button1;
+        }
+
+        if (!data.button2 || !data.button2link) {
+            document.getElementById("button2link").style.display = "none";
+            document.getElementById("button2").style.display = "none";
+        } else {
+            document.getElementById("button2link").href = data.button2link;
+            document.getElementById("button2").innerHTML = data.button2;
         }
 
     });
