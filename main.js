@@ -24,7 +24,17 @@ function showInfo(data, tabletop) {
                 "        <div id=\"bttn\" class=\"button-box\"></div>";
         }
 
+        if (!data.headertitle) {
+            document.getElementById("headertitle").style.display = "none";
+        } else {
+            document.getElementById("headertitle").innerHTML = data.headertitle;
+        }
 
+        if (!data.headertext) {
+            document.getElementById("headertext").style.display = "none";
+        } else {
+            document.getElementById("headertext").innerHTML = data.headertext;
+        }
 
         if ((!data.button1 || !data.button1link) && (!data.button2 || !data.button2link)) {
             document.getElementById("bttn").style.display = "none";
@@ -117,6 +127,8 @@ function showInfo(data, tabletop) {
         if (data.autor && data.autorlink) {
             document.getElementById("footer").innerHTML = data.autor;
             document.getElementById("footer").href = data.autorlink;
+        } else {
+            document.getElementById("footer").style.display = "none";
         }
 
     });
