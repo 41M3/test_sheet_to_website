@@ -12,12 +12,13 @@ function init() {
 function showInfo(data, tabletop) {
     data.forEach(function (data) {
 
-        testempty.innerHTML = "<h3> PUTTTE</h3>"
+        testempty.innerHTML = "<h3 id=\"bodyy\"></h3>"
 
         title.innerHTML = data.title;
         header.innerHTML = data.header;
         header2.innerHTML = data.header2;
         body.innerHTML = data.body;
+            bodyy.innerHTML = data.body;
         body2.innerHTML = data.body2;
         body3.innerHTML = data.body3;
         body4.innerHTML = data.body4;
